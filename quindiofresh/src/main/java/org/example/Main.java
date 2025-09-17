@@ -13,5 +13,18 @@ public class Main {
             // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
             System.out.println("i = " + i);
         }
+
+        Cliente cliente = new Cliente("Juan Pérez", "JuanPerez@gmail.com", "30983776476");
+
+        Pedido pedido1 = new Pedido.Builder("P001", cliente)
+                .agregarItemPedido(new Producto("P001", "Juan Pérez" , 3 ))
+                .direccionEnvio("Calle 123")
+                .notas("Dejar en portería")
+                .codigoDescuento("DESC10")
+                .envio(new EnvioEstandar())
+                .build();
+
+        System.out.println(pedido1);
+        pedido1.procesarEnvio();
     }
 }

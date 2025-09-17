@@ -5,7 +5,7 @@ public class EnvioEstandar implements IEnvio {
     @Override
     public double calcularCosto(Pedido pedido) {
         // Ejemplo: costo fijo por envío estándar
-        return 10.0;
+        return 7000;
     }
 
     @Override
