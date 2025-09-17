@@ -24,6 +24,14 @@ public class Main {
                 .envio(new EnvioEstandar())
                 .build();
 
+        Pedido pedido2 = new Pedido.Builder("P001", cliente)
+                .agregarItemPedido(new Producto("P001", "Juan Pérez" , 3 ))
+                .direccionEnvio("Calle 123")
+                .notas("Dejar en portería")
+                .codigoDescuento("DESC10")
+                .envio(new EnvioExpress())
+                .build();
+
         System.out.println(pedido1);
         pedido1.procesarEnvio();
     }
